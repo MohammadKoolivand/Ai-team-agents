@@ -1,6 +1,8 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
+import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
 
 const app = express();
 const port = 3000;
@@ -13,10 +15,23 @@ const users = [];
 const loans = [];
 
 // User management
-app.post('/users', (req, res) => {
-  const newUser = req.body;
+app.post('/users', async (req, res) => {
+  const { username, password } = req.body;
+  const hashedPassword = await bcrypt.hash(password, 10);
+  const newUser = { username, password: hashedPassword };
   users.push(newUser);
   res.status(201).send(newUser);
+});
+
+app.post('/login', async (req, res) => {
+  const { username, password } = req.body;
+  const user = users.find(u => u.username === username);
+  if (user && await bcrypt.compare(password, user.password)) {
+    const token = jwt.sign({ username }, 'secret_key', { expiresIn: '1h' });
+    res.json({ token });
+  } else {
+    res.status(401).send('Invalid credentials');
+  }
 });
 
 app.get('/users', (req, res) => {

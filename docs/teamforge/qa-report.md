@@ -1,18 +1,14 @@
 # TeamForge QA execution evidence
 
-- auto: **SKIPPED** — No supported package.json scripts detected
+- npm_test: **SKIPPED** — Docker daemon or image node:22-alpine unavailable: Cannot connect to the Docker daemon at unix:///Users/mohammadkoolivand/.docker/run/docker.sock. Is the docker daemon running?
+
 
 ```
 
 ```
 
-- auto: **SKIPPED** — No supported package.json scripts detected
+- npm_test: **SKIPPED** — Docker daemon or image node:22-alpine unavailable: Cannot connect to the Docker daemon at unix:///Users/mohammadkoolivand/.docker/run/docker.sock. Is the docker daemon running?
 
-```
-
-```
-
-- auto: **SKIPPED** — No supported package.json scripts detected
 
 ```
 

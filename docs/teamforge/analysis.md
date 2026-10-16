@@ -1,36 +1,32 @@
-# سامانه مدیریت تسهیلات بانکی
+# TeamForge Analysis Document
 
-## تحلیل نیازمندی‌ها
-سامانه مدیریت تسهیلات بانکی شامل مدیریت فرآیند از ثبت درخواست تا اعتبارسنجی، تصویب، پرداخت و بازپرداخت است. امکانات اصلی شامل مدیریت مشتریان و کاربران، تعریف انواع تسهیلات، ثبت درخواست و بارگذاری مدارک، بررسی و تأیید درخواست‌ها، مدیریت قرارداد، اقساط و ضمانت‌ها، و داشبورد مدیریتی است.
+## Project Overview
+The project aims to design and implement a login page for a banking facilities system. The login page should be professional, minimalistic, and RTL (Right-to-Left) using React and TypeScript. The backend should be built with Node.js, and the user data should be stored in PostgreSQL with hashed passwords. The login process should be secured using sessions. Upon successful login, the user should be redirected to the dashboard. A test user should be created for testing purposes.
 
-## فازبندی
-1. **مدیریت مشتریان و کاربران**: ایجاد و مدیریت سطوح دسترسی مختلف.
-2. **تعریف انواع تسهیلات**: ایجاد و مدیریت شرایط دریافت تسهیلات.
-3. **ثبت درخواست**: ثبت درخواست‌ها و بارگذاری مدارک مورد نیاز.
-4. **بررسی و اعتبارسنجی درخواست‌ها**: بررسی و تأیید یا رد درخواست‌ها.
-5. **مدیریت قرارداد، اقساط و ضمانت‌ها**: مدیریت قرارداد‌ها، اقساط و ضمانت‌ها.
-6. **داشبورد مدیریتی**: گزارش‌گیری و ثبت سوابق عملیات.
+## Feature Requirements
+### Organization: تسهیلات
+- Design and implement a professional, minimalistic, and RTL login page using React and TypeScript.
+- Implement a backend with Node.js for user login and database interaction.
+- Store user data in PostgreSQL with hashed passwords.
+- Secure the login process using sessions.
+- Redirect the user to the dashboard upon successful login.
+- Create a test user for testing purposes.
 
-## فرانت‌اند و بک‌اند
-- **فرانت‌اند**: React و TypeScript
-- **بک‌اند**: Node.js و PostgreSQL
-- **رابط فارسی، RTL و واکنش‌گرا**: ارائه رابط کاربری فارسی، RTL و واکنش‌گرا
-- **احراز هویت، RBAC، ثبت لاگ و تست خودکار**: ارائه احراز هویت، مدیریت دسترسی‌های کاربران، ثبت لاگ‌ها و تست‌های خودکار
-- **استفاده از داده‌ها و سرویس‌های آزمایشی**: استفاده از داده‌ها و سرویس‌های آزمایشی بدون اتصال به بانک واقعی
+### لیست کارها
+- Design and implement the login page.
+- Implement the backend for user login and database interaction.
+- Store user data in PostgreSQL with hashed passwords.
+- Secure the login process using sessions.
+- Redirect the user to the dashboard upon successful login.
+- Create a test user for testing purposes.
 
-## روند توسعه در TeamForge
-1. **AI Analyst**: تحلیل نیازمندی‌ها، فازبندی، تعریف فیچرها و تسک‌ها
-2. **Backend Agent**: طراحی API و پیاده‌سازی منطق کسب‌وکار
-3. **Frontend Agent**: طراحی صفحات و اتصال به API
-4. **QA Agent**: اجرای تست‌ها و گزارش مشکلات
-
-خروجی هر مرحله باید توسط مسئول انسانی بررسی و تأیید شود. تسک‌های مستقل می‌توانند هم‌زمان در مراحل متفاوت اجرا شوند.
-
-**ابتدا پروژه را تحلیل، فازبندی و به تسک‌های کوچک تقسیم کن. پس از تأیید انسانی، توسعه تدریجی MVP را آغاز کن.**
-
-## پیشنهاد‌های آنلاین
-- **API Contract**: تعریف دقیق API‌هایی که باید طراحی شوند.
-- **Architecture**: طراحی ساختار کلی سامانه.
-- **Risks**: شناسایی و تحلیل ریسک‌های ممکن.
-
-**نکته مهم**: هر مرحله باید توسط مسئول انسانی بررسی و تأیید شود.
+## Acceptance Criteria
+1. The login page should be beautiful, responsive, and fully RTL.
+2. The login API should work correctly and be connected to the database.
+3. Appropriate error messages should be displayed for incorrect information.
+4. A successful login should redirect the user to the dashboard.
+5. Protected pages should not be accessible without login.
+6. Users should be able to log out and manage their sessions.
+7. Front-end and back-end tests should be executed and successful.
+8. Each stage's output should be sent for human review.
+9. Note: Only design the appearance; do not change the actual project files. Implement and test the login functionality from start to finish.
